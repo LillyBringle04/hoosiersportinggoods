@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+
+<html lang='en'>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="Hoosier Sporting Goods">
+        <meta name="keywords" content="Columbus, Indiana, local, business, sports, schools, gear, Hoosier Sporting Goods">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <title> HSG - Cart </title>
+        <!-- Link to CSS files -->
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/checkoutstyle.css">
+        <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+        <!-- jQuery library (served from CloudFlare) -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+        <!-- jStorage library (served from CloudFlare) -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jStorage/0.4.12/jstorage.min.js"></script>
+        <!-- Cesta-Feira Javascript file -->
+        <script src="js/dist/cesta-feira.min.js"></script>
+        <script src="js/dist/cesta-feira.js"></script>
+        <script src="js/shop-script.js"></script>
+        <script src="js/shop-filter-script.js"></script>
+        <script src="js/cart-script.js"></script>
+        <!-- Dropdown JS -->
+        <script src="js/gender-dropdown.js"></script>
+        <!-- Link for FontAwesome Icons -->
+        <script src="https://kit.fontawesome.com/1f757a6e4f.js" crossorigin="anonymous"></script>
+    </head>
+
+<body>
+    <header> 
+        <div class="top-nav">
+            <a href="index.html"><img class="navitem1" src="img/HSG_Logo.svg" alt="HSG Logo"> </a>
+            <div class="navitem2">
+                <form action="shop.html">
+                    <input type="text" id="SearchInput" placeholder="I'm shopping for.." name="search">
+                    <button type="submit" class="search-submit" onclick="window.location.href=shop.html"><i class="fa fa-search"></i></button>
+                </form>
+            </div>
+            <div class="navitem3">
+                <a class="nav-link cart-item-count" href="cart.html" data-cesta-feira-items-count><span
+                    class="fa fa-shopping-cart"></span></a>
+                    <a class="nav-link cart-item-count" href="account.html" data-cesta-feira-items-count><span
+                        class="fa fa-user"></span></a>
+            </div>
+        </div> 
+
+        <nav class="bottom-nav">
+            <ul> 
+                <li> <a href="shop.html">Womens</a></li>
+                <li> <a href="shop.html">Men</a></li>
+                <li> <a href="shop.html">Youth</a></li>
+                <li> <a href="shop.html">Accessories</a></li>
+                <li> <a href="shop.html">Schools</a></li>
+                <li> <a href="shop.html">Sports</a></li>
+            </ul>
+        </nav>
+
+<!-- Responsive Navigation for 768px or Smaller -->
+        <div class="res-nav">
+            <div class="res-top-nav">
+                <div class="res-flex-item1">
+                    <div class="resnav">
+                        <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+                        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                          <i class="fa fa-bars"></i>
+                        </a>
+
+                        <!-- Navigation links (hidden by default) -->
+                        <div id="myLinks">
+                            <a href="shop.html">Womens</a>
+                            <a href="shop.html">Men</a>
+                            <a href="shop.html">Youth</a>
+                            <a href="shop.html">Accessories</a>
+                            <a href="shop.html">Schools</a>
+                            <a href="shop.html">Sports</a>
+                        </div>
+                    </div>                          
+                </div>
+                <div class="res-flex-item2">
+                    <img src="img/HSG_Logo.svg" alt="HSG Logo"> 
+                </div>
+                <div class="res-flex-item3"> 
+                    <a class="nav-link cart-item-count" href="cart.html" data-cesta-feira-items-count><span
+                        class="fa fa-shopping-cart"></span></a>
+                    <a class="nav-link cart-item-count" href="account.html" data-cesta-feira-items-count><span
+                            class="fa fa-user"></span></a>
+                </div>
+            </div>
+
+            <div class="res-search">
+                <form action="/action_page.php">
+                    <input type="text" placeholder="I'm shopping for.." name="search">
+                    <button type="submit"><i class="fa fa-search"></i></button>
+                </form>
+            </div>
+        </div>
+    </header>
+
+    <div class="container checkout">
+        <div class="row justify-content-md-center">
+            <div class="col-sm-12 col-md-10 col-md-11">
+                <div class="gift-section">
+                    <div class="gift-checkbox">
+                        <input type="checkbox" id="gift1" name="gift1" value="Gift">
+                        <label for="gift1"> Gift</label><br>
+                    </div>
+                </div>
+                <div class="rewards-section">
+                    <h1> HOOSIER SPORTING GOOD REWARDS </h1>
+                    <h2> Earn big rewards by signing up or logging in to your account today!</h2>
+                    <a href="account.html" class="hsg-btn reward-btn"> SIGN IN </a>
+                    </div>
+            </div>
+            <div class="col-sm-12 col-md-10 col-md-offset-1">
+                <table class="table table-hover">
+                    <thead>
+                    <tr>
+                        <th>Product</th>
+                        <th>Quantity</th>
+                        <th class="text-center">Price</th>
+                        <th class="text-center">Total</th>
+                        <th> </th>
+                    </tr>
+                    </thead>
+                    <tbody id="cart-items">
+                    </tbody>
+                    <tfoot>
+                    <tr>
+                        <td><a href="javascript:;" class="btn btn-danger" data-cesta-feira-clear-basket>Clear Cart</a></td>
+                        <td>  </td>
+                        <td>Total</td>
+                        <td class="text-right" id="total-value"><strong>$0</strong></td>
+                        <td>  </td>
+                    </tr>
+                    </tfoot>
+                </table>
+            </div>
+            <a href="#" class="hsg-btn checkout-btn"> Checkout </a>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-flex-container">
+            <img class="footer-flex-item1" src="img/HSG_Logo.svg" alt="HSG Logo">
+            <div class="footer-flex-item2">
+                <div class="footer-info">
+                    <ul class="footer-nav">
+                        <li><a href="contact.html">Contact </a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="shop.html"> Shop</a></li>
+                    </ul>
+                    <ul class="social-nav">
+                        <li> <a href="https://www.facebook.com/p/Hoosier-Sporting-Goods-100057117083265/"><i class="fa-brands fa-facebook"></i></a></li>
+                        <li> <i class="fa-brands fa-instagram"></i></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
+

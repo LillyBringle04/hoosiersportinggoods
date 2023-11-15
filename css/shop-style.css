@@ -1,0 +1,233 @@
+.hero {
+  margin: 2em;
+}
+
+.shop-section {
+  max-width: 960px!important;
+  margin: 2em auto;
+}
+
+.card-btn {
+    background-color: #f3f3f3;
+    color: #0E2332;
+    border: none;
+    text-align: center;
+    padding: 1rem;
+    font-family: Inter;
+    font-size: 1.125rem;
+    font-weight: 700;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+.card-btn:hover {
+    color: #E9443A;
+    border: none;
+}
+
+.card-shop-hr {
+  border: solid 2px #E9443A;
+  margin: 1rem auto;
+}
+
+.shop-card a{
+  text-decoration: none;
+  color:#0E2332;
+}
+
+/* Normal Filter Menu */
+.filter-selectors {
+  display: none;
+  position: absolute;
+  flex-direction: column;
+  z-index: 1;
+}
+
+.filterhead {
+    background-color: #E9443A;
+    color: #f3f3f3;
+    padding: 1rem;
+    margin: 0;
+    font-family: Inter;
+    font-size: 1rem;
+    border: 1px solid #E9443A;
+    width: 10vw;
+    text-align: left;
+    height: 3rem;
+  }
+
+.filterhead h3 {
+  color: #FFF;
+  text-align: center;
+  font-family: Inter, Arial, sans-serif;
+  font-size: 1rem;
+}
+
+/* Responsive Filter Menu */
+.res-filter {
+  display: flex;
+  flex-direction: row;
+  max-width: 960px;
+  margin: 0 auto;
+  justify-content: flex-start;
+}
+
+.filter-button {
+  background-color: #E9443A;
+  border: none;
+}
+
+.filter-button i{
+  padding: 0.5rem;
+  color:#f3f3f3;
+  font-size: 2em;
+}
+
+.filter-button i:hover {
+  color:#C6C6C6;
+}
+
+.res-filter-selectors button {
+  text-align: center;
+  min-width: 90px;
+}
+
+.shop-pages {
+  max-width: 960px;
+  margin: 0 auto;
+  font-family: Inter, Arial, sans-serif;
+  font-size: 1rem;
+  font-weight: 200;
+}
+
+/* Dropdown Buttons */
+.genderdropbtn, .typedropbtn, .schooldropbtn, .colordropbtn, .sizedropbtn, .pricedropbtn{
+    background-color: white;
+    color: #0E2332;
+    padding: 1rem;
+    margin: 0;
+    font-family: Inter;
+    font-size: 1rem;
+    border: 1px solid #C6C6C6;
+    width: 10vw;
+    text-align: left; 
+  }
+
+.genderdropbtn i, .typedropbtn i, .schooldropbtn i, .colordropbtn i, .sizedropbtn i, .pricedropbtn i {
+    float: right;
+  }
+  
+  /* Dropdown button on hover & focus */
+  .genderdropbtn:hover, .genderdropbtn:focus, .typedropbtn:hover, .typedropbtn:focus, .schooldropbtn:hover, .schooldropbtn:focus,
+  .colordropbtn:hover, .colordropbtn:focus, .sizedropbtn:hover, .sizedropbtn:focus, .pricedropbtn:hover, .pricedropbtn:focus
+   { background-color: #dddddd;}
+  
+  /* The container <div> - needed to position the dropdown content */
+  .gender-dropdown, .type-dropdown, .school-dropdown,
+  .color-dropdown, .size-dropdown, .price-dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* Dropdown Content (Hidden by Default) */
+  .gender-dropdown-content, .type-dropdown-content, .school-dropdown-content, .color-dropdown-content,
+  .size-dropdown-content, .price-dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f6f6f6;
+    min-width: 230px;
+    border: 1px solid #ddd;
+    z-index: 1;
+  }
+  
+  /* Links inside the dropdown */
+  .gender-dropdown-content button, .type-dropdown-content button, .school-dropdown-content button,
+  .color-dropdown-content button, .size-dropdown-content button, .price-dropdown-content button{
+    background-color: white;
+    color: #0E2332;
+    padding: 1rem;
+    margin: 0;
+    font-family: Inter;
+    font-size: 1rem;
+    border: 1px solid #C6C6C6;
+    width: 10vw;
+    text-align: left;
+  }
+  
+  /* Change color of dropdown links on hover */
+  .gender-dropdown-content button:hover, .type-dropdown-content button:hover, .school-dropdown-content button:hover,
+  .color-dropdown-content button:hover, .size-dropdown-content button:hover, .price-dropdown-content button:hover
+  {background-color: #dddddd}
+  
+  /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+  .gender-show, .type-show, .school-show,
+  .color-show, .size-show, .price-show
+   {display:block;}
+
+   
+
+   /* Responsiveness w/ Media Queries */
+
+   @media only screen and (min-width: 300px) {
+    .shop-card .card .card-img-top {
+      width: 205px;
+      height: 205px;
+      text-align: center;
+    }
+
+    .shop-card {
+      margin: 2em auto;
+    }
+
+    .res-filter {
+      width: 100vw;
+    }
+   }
+
+   @media only screen and (min-width: 576px) {
+    .shop-card .card .card-img-top {
+      width: 205px;
+      height: 205px
+    }
+
+    .shop-card {
+      margin: 0;
+    }
+   }
+
+   @media only screen and (min-width: 768px) {
+      .shop-card .card .card-img-top {
+        width: 205px;
+        height: 205px
+      }
+
+      .shop-card {
+        margin: 0;
+      }
+   }
+
+   @media only screen and (min-width: 992px) {
+    .shop-card {
+      margin: 0;
+    }
+   }
+
+   @media only screen and (min-width: 1200px) {
+    .shop-card {
+      margin: 0;
+    }
+
+    .filter-selectors {
+      display: flex;
+    }
+
+    .res-filter {
+      display: none;
+    }
+   }
+
+
+
+

@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="Hoosier Sporting Goods">
+        <meta name="keywords" content="Columbus, Indiana, local, business, sports, schools, gear, Hoosier Sporting Goods">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <title> HSG - Shopping </title>
+        <!-- Link to CSS files -->
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/shop-style.css">
+        <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+        <!-- jQuery library (served from CloudFlare) -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+        <!-- jStorage library (served from CloudFlare) -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jStorage/0.4.12/jstorage.min.js"></script>
+        <!-- Cesta-Feira Javascript file -->
+        <script src="js/dist/cesta-feira.min.js"></script>
+        <script src="js/dist/cesta-feira.js"></script>
+        <script src="js/shop-script.js"></script>
+        <script src="js/shop-filter-script.js"></script>
+        <!-- Dropdown JS -->
+        <script src="js/gender-dropdown.js"></script>
+        <!-- Link for FontAwesome Icons -->
+        <script src="https://kit.fontawesome.com/1f757a6e4f.js" crossorigin="anonymous"></script>
+    </head>
+
+    <body>
+        <header> 
+            <div class="top-nav">
+                <a href="index.html"><img class="navitem1" src="img/HSG_Logo.svg" alt="HSG Logo"> </a>
+                <div class="navitem2">
+                    <form action="shop.html">
+                        <input type="text" id="SearchInput" placeholder="I'm shopping for.." name="search">
+                        <button type="submit" class="search-submit" onclick="window.location.href=shop.html"><i class="fa fa-search"></i></button>
+                    </form>
+                </div>
+                <div class="navitem3">
+                    <a class="nav-link cart-item-count" href="cart.html" data-cesta-feira-items-count><span
+                        class="fa fa-shopping-cart"></span></a>
+                        <a class="nav-link cart-item-count" href="account.html" data-cesta-feira-items-count><span
+                            class="fa fa-user"></span></a>
+                </div>
+            </div> 
+
+            <nav class="bottom-nav">
+                <ul> 
+                    <li> <a href="shop.html">Womens</a></li>
+                    <li> <a href="shop.html">Men</a></li>
+                    <li> <a href="shop.html">Youth</a></li>
+                    <li> <a href="shop.html">Accessories</a></li>
+                    <li> <a href="shop.html">Schools</a></li>
+                    <li> <a href="shop.html">Sports</a></li>
+                </ul>
+            </nav>
+
+    <!-- Responsive Navigation for 768px or Smaller -->
+            <div class="res-nav">
+                <div class="res-top-nav">
+                    <div class="res-flex-item1">
+                        <div class="resnav">
+                            <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+                            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                              <i class="fa fa-bars"></i>
+                            </a>
+
+                            <!-- Navigation links (hidden by default) -->
+                            <div id="myLinks">
+                                <a href="shop.html">Womens</a>
+                                <a href="shop.html">Men</a>
+                                <a href="shop.html">Youth</a>
+                                <a href="shop.html">Accessories</a>
+                                <a href="shop.html">Schools</a>
+                                <a href="shop.html">Sports</a>
+                            </div>
+                        </div>                          
+                    </div>
+                    <div class="res-flex-item2">
+                        <img src="img/HSG_Logo.svg" alt="HSG Logo"> 
+                    </div>
+                    <div class="res-flex-item3"> 
+                        <a class="nav-link cart-item-count" href="cart.html" data-cesta-feira-items-count><span
+                            class="fa fa-shopping-cart"></span></a>
+                        <a class="nav-link cart-item-count" href="account.html" data-cesta-feira-items-count><span
+                                class="fa fa-user"></span></a>
+                    </div>
+                </div>
+
+                <div class="res-search">
+                    <form action="/action_page.php">
+                        <input type="text" placeholder="I'm shopping for.." name="search">
+                        <button type="submit"><i class="fa fa-search"></i></button>
+                    </form>
+                </div>
+            </div>
+        </header>
+        
+        <section class="hero">
+            <h1 class="hsg-h1"> SHOP NOW</h1>
+            <hr class="hsg-hr-orange">
+            <div class="hero-flex-container">
+                <div class="hero-flex-item1">
+                    <img src="img/HSG_CN_01.jpg" alt="Columbus North Tshirt" width="300" height="300">
+                    <hr class="hsg-hr-orange"> 
+                    <h2 class="hsg-h2"> Columbus North</h2>
+                    <a href="shop.html" class="hsg-btn">SHOP NOW</a>
+                </div>
+                <div class="hero-flex-item2">
+                    <img src="img/HSG_CI_01.jpg" alt="Columbus Indiana Tshirt" width="300" height="300">
+                    <hr class="hsg-hr-orange">
+                    <h2 class="hsg-h2"> Columbus Indiana </h2>
+                    <a href="shop.html" class="hsg-btn">SHOP NOW</a>
+                </div>
+                <div class="hero-flex-item3">
+                    <img src="img/HSG_CE_01.jpg" alt="Columbus East Tshirt" width="300" height="300">
+                    <hr class="hsg-hr-orange">  
+                    <h2 class="hsg-h2"> Columbus East</h2>
+                    <a href="shop.html" class="hsg-btn">SHOP NOW</a>
+                </div>
+            </div>
+        </section> 
+
+
+        <div class="filter-selectors">
+            <div class="filterhead">
+                <h3> FILTER </h3>
+            </div>
+            
+            <div class="gender-dropdown">
+                <button onclick="myFunction()" class="genderdropbtn">Gender <i class="fa-solid fa-chevron-down"> </i></button>
+                <div id="GenderDropdown" class="gender-dropdown-content">
+                    <button class="btn active" onclick="filterSelection('genderall')"> Show all</button>
+                    <button class="btn" onclick="filterSelection('male')"> Male</button>
+                    <button class="btn" onclick="filterSelection('female')"> Female</button>
+                    <button class="btn" onclick="filterSelection('nuetral')"> Nuetral</button>
+                </div>
+            </div>
+
+            <div class="type-dropdown">
+                <button onclick="myFunction()" class="typedropbtn">Type <i class="fa-solid fa-chevron-down"> </i></button>
+                <div id="TypeDropdown" class="type-dropdown-content">
+                    <button class="btn active" onclick="filterSelection('typeall')"> Show all</button>
+                    <button class="btn" onclick="filterSelection('tshirt')"> T-Shirt</button>
+                    <button class="btn" onclick="filterSelection('longsleeve')"> Longsleeve</button>
+                    <button class="btn" onclick="filterSelection('sweatshirt')"> Sweatshirt</button>
+                </div>
+            </div>
+
+            <div class="school-dropdown">
+                <button onclick="myFunction()" class="schooldropbtn">School <i class="fa-solid fa-chevron-down"> </i></button>
+                <div id="SchoolDropdown" class="school-dropdown-content">
+                    <button class="btn active" onclick="filterSelection('schoolall')"> Show all</button>
+                    <button class="btn" onclick="filterSelection('north')">Columbus North </button>
+                    <button class="btn" onclick="filterSelection('east')"> Columbus East </button>
+                </div>
+            </div>
+
+            <div class="color-dropdown">
+                <button onclick="myFunction()" class="colordropbtn">Color <i class="fa-solid fa-chevron-down"> </i></button>
+                <div id="ColorDropdown" class="color-dropdown-content">
+                    <button class="btn active" onclick="filterSelection('colorall')"> Show all</button>
+                    <button class="btn" onclick="filterSelection('red')"> Red </button>
+                    <button class="btn" onclick="filterSelection('orange')"> Orange </button>
+                    <button class="btn" onclick="filterSelection('yellow')"> Yellow </button>
+                    <button class="btn" onclick="filterSelection('green')">Greem </button>
+                    <button class="btn" onclick="filterSelection('blue')"> Blue </button>
+                    <button class="btn" onclick="filterSelection('purple')"> Purple </button>
+                    <button class="btn" onclick="filterSelection('white')"> White </button>
+                    <button class="btn" onclick="filterSelection('grey')"> Grey </button>
+                    <button class="btn" onclick="filterSelection('black')"> Black </button>
+                </div>
+            </div>
+
+            <div class="size-dropdown">
+                <button onclick="myFunction()" class="sizedropbtn">Size <i class="fa-solid fa-chevron-down"> </i></button>
+                <div id="SizeDropdown" class="size-dropdown-content">
+                    <button class="btn active" onclick="filterSelection('sizeall')"> Show all</button>
+                    <button class="btn" onclick="filterSelection('xsmall')"> Extra Small </button>
+                    <button class="btn" onclick="filterSelection('small')"> Small </button>
+                    <button class="btn" onclick="filterSelection('medium')"> Medium </button>
+                    <button class="btn" onclick="filterSelection('large')">Large </button>
+                    <button class="btn" onclick="filterSelection('xlarge')"> Extra Large </button>
+                </div>
+            </div>
+
+            <div class="price-dropdown">
+                <button onclick="myFunction()" class="pricedropbtn">Price <i class="fa-solid fa-chevron-down"> </i></button>
+                <div id="PriceDropdown" class="price-dropdown-content">
+                    <button class="btn active" onclick="filterSelection('priceall')"> Show all</button>
+                    <button class="btn" onclick="filterSelection('10-20')"> $10-$20 </button>
+                    <button class="btn" onclick="filterSelection('20-30')"> $20-$30 </button>
+                    <button class="btn" onclick="filterSelection('30-40')"> $30-$40 </button>
+                    <button class="btn" onclick="filterSelection('40-50')"> $40-$50 </button>
+                </div>
+            </div>
+        </div> 
+
+        <div class="res-filter">
+            <button class="filter-button" type="button" data-toggle="collapse" data-target="#collapseFilter" aria-expanded="true" aria-controls="collapseFilter">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+    
+            <div class="res-filter-selectors collapse show" id="collapseFilter">
+                <div class="gender-dropdown">
+                    <button onclick="myFunction()" class="genderdropbtn">Gender <i class="fa-solid fa-chevron-down"> </i></button>
+                    <div id="ResGenderDropdown" class="gender-dropdown-content">
+                        <button class="btn active" onclick="filterSelection('genderall')"> Show all</button>
+                        <button class="btn" onclick="filterSelection('male')"> Male</button>
+                        <button class="btn" onclick="filterSelection('female')"> Female</button>
+                        <button class="btn" onclick="filterSelection('nuetral')"> Nuetral</button>
+                    </div>
+                </div>
+    
+                <div class="type-dropdown">
+                    <button onclick="myFunction()" class="typedropbtn">Type <i class="fa-solid fa-chevron-down"> </i></button>
+                    <div id="ResTypeDropdown" class="type-dropdown-content">
+                        <button class="btn active" onclick="filterSelection('typeall')"> Show all</button>
+                        <button class="btn" onclick="filterSelection('tshirt')"> T-Shirt</button>
+                        <button class="btn" onclick="filterSelection('longsleeve')"> Longsleeve</button>
+                        <button class="btn" onclick="filterSelection('sweatshirt')"> Sweatshirt</button>
+                    </div>
+                </div>
+    
+                <div class="school-dropdown">
+                    <button onclick="myFunction()" class="schooldropbtn">School <i class="fa-solid fa-chevron-down"> </i></button>
+                    <div id="ResSchoolDropdown" class="school-dropdown-content">
+                        <button class="btn active" onclick="filterSelection('schoolall')"> Show all</button>
+                        <button class="btn" onclick="filterSelection('north')">Columbus North </button>
+                        <button class="btn" onclick="filterSelection('east')"> Columbus East </button>
+                    </div>
+                </div>
+    
+                <div class="color-dropdown">
+                    <button onclick="myFunction()" class="colordropbtn">Color <i class="fa-solid fa-chevron-down"> </i></button>
+                    <div id="ResColorDropdown" class="color-dropdown-content">
+                        <button class="btn active" onclick="filterSelection('colorall')"> Show all</button>
+                        <button class="btn" onclick="filterSelection('red')"> Red </button>
+                        <button class="btn" onclick="filterSelection('orange')"> Orange </button>
+                        <button class="btn" onclick="filterSelection('yellow')"> Yellow </button>
+                        <button class="btn" onclick="filterSelection('green')">Greem </button>
+                        <button class="btn" onclick="filterSelection('blue')"> Blue </button>
+                        <button class="btn" onclick="filterSelection('purple')"> Purple </button>
+                        <button class="btn" onclick="filterSelection('white')"> White </button>
+                        <button class="btn" onclick="filterSelection('grey')"> Grey </button>
+                        <button class="btn" onclick="filterSelection('black')"> Black </button>
+                    </div>
+                </div>
+    
+                <div class="size-dropdown">
+                    <button onclick="myFunction()" class="sizedropbtn">Size <i class="fa-solid fa-chevron-down"> </i></button>
+                    <div id="ResSizeDropdown" class="size-dropdown-content">
+                        <button class="btn active" onclick="filterSelection('sizeall')"> Show all</button>
+                        <button class="btn" onclick="filterSelection('xsmall')"> Extra Small </button>
+                        <button class="btn" onclick="filterSelection('small')"> Small </button>
+                        <button class="btn" onclick="filterSelection('medium')"> Medium </button>
+                        <button class="btn" onclick="filterSelection('large')">Large </button>
+                        <button class="btn" onclick="filterSelection('xlarge')"> Extra Large </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <div class="shop-section container">
+        <div class="row justify-content-md-center ">
+            <div class="shop-card col-md-4">
+                <div class="card">
+                   <a href="product1.html"><img class="card-img-top" src="img/HSG_shop_columbus_01.jpg" alt="Columbus Indiana Design 1821" width="278" height="293"></a>
+                    <div class="card-body">
+                        <a href="product1.html"><h4 class="card-title">Port & Company Core 
+                            Cotton Tee 1821- Columbus Indiana</h4></a>
+                        <p class="card-text">$20.00</p>
+                        <p class="card-colors"> 49 Colors Available </p>
+                    </div>
+                    <div class="card-footer">
+                        <hr class="card-shop-hr">
+                        <form action="#" class="form" data-cesta-feira-form>
+                            <div class="form-group">
+                                <input type="number" min="1" value="1" class="form-control" name="quantity" data-cesta-feira-attribute placeholder="Quantity">
+                            </div>
+                            <input type="hidden" value="Port & Company Core 
+                            Cotton Tee 1821" name="product_name" data-cesta-feira-attribute="">
+                            <input type="hidden" value="20.00" name="unity_price" data-cesta-feira-attribute>
+                            <input type="hidden" value="1" data-cesta-feira-item-id>
+                            <input type="hidden" value="shirt adult columbus-indiana" name="item_type" data-cesta-feira-attribute>
+                            <input type="submit" class="card-btn" value="Add to Cart">
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="shop-card col-md-4">
+                <div class="card">
+                    <img class="card-img-top" src="img/HSG_shop_columbus_02.jpg" alt="Columbus Indiana Design 1821" width="278" height="293">
+                    <div class="card-body">
+                        <h4 class="card-title"> Port & Company Long Sleeve 
+                            Core Cotton Tee Patch Logo- Columbus Indiana </h4>
+                        <p class="card-text">$24.00</p>
+                        <p class="card-colors"> 21 Colors Available </p>
+                    </div>
+                    <div class="card-footer">
+                        <hr class="card-shop-hr">
+                        <form action="#" class="form" data-cesta-feira-form>
+                            <div class="form-group">
+                                <input type="number" min="1" value="1" class="form-control" name="quantity" data-cesta-feira-attribute placeholder="Quantity">
+                            </div>
+                            <input type="hidden" value="Port & Company Core 
+                            Cotton Tee 1821" name="product_name" data-cesta-feira-attribute="">
+                            <input type="hidden" value="24.00" name="unity_price" data-cesta-feira-attribute>
+                            <input type="hidden" value="1" data-cesta-feira-item-id>
+                            <input type="hidden" value="shirt adult columbus-indiana" name="item_type" data-cesta-feira-attribute>
+                            <input type="submit" class="card-btn" value="Add to Cart">
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="shop-card col-md-4">
+                <div class="card">
+                    <img class="card-img-top" src="img/HSG_shop_columbus_03.jpg" alt="Columbus Indiana Design 1821" width="278" height="293">
+                    <div class="card-body">
+                        <h4 class="card-title">Port & Company Core 
+                            Cotton Tee 1821 - Columbus Indiana</h4>
+                        <p class="card-text">$24.00</p>
+                        <p class="card-colors"> 21 Colors Available </p>
+                    </div>
+                    <div class="card-footer">
+                        <hr class="card-shop-hr">
+                        <form action="#" class="form" data-cesta-feira-form>
+                            <div class="form-group">
+                                <input type="number" min="1" value="1" class="form-control" name="quantity" data-cesta-feira-attribute placeholder="Quantity">
+                            </div>
+                            <input type="hidden" value="Port & Company Core 
+                            Cotton Tee 1821" name="product_name" data-cesta-feira-attribute="">
+                            <input type="hidden" value="20.00" name="unity_price" data-cesta-feira-attribute>
+                            <input type="hidden" value="1" data-cesta-feira-item-id>
+                            <input type="hidden" value="shirt adult columbus-indiana" name="item_type" data-cesta-feira-attribute>
+                            <input type="submit" class="card-btn" value="Add to Cart">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-md-center ">
+                    <div class="shop-card col-md-4">
+                        <div class="card">
+                           <a href="product1.html"><img class="card-img-top" src="img/HSG_shop_columbus_04.jpg" alt="Columbus Indiana Design 1821" width="278" height="293"></a>
+                            <div class="card-body">
+                                <a href="product1.html"><h4 class="card-title">Port & Company Long Sleeve 
+                                    Core Cotton Tee Patch Logo
+                                    - Columbus Indiana</h4></a>
+                                <p class="card-text">$20.00</p>
+                                <p class="card-colors"> 40 Colors Available </p>
+                            </div>
+                            <div class="card-footer">
+                                <hr class="card-shop-hr">
+                                <form action="#" class="form" data-cesta-feira-form>
+                                    <div class="form-group">
+                                        <input type="number" min="1" value="1" class="form-control" name="quantity" data-cesta-feira-attribute placeholder="Quantity">
+                                    </div>
+                                    <input type="hidden" value="Port & Company Long Sleeve 
+                                    Core Cotton Tee Patch Logo" name="product_name" data-cesta-feira-attribute="">
+                                    <input type="hidden" value="24.00" name="unity_price" data-cesta-feira-attribute>
+                                    <input type="hidden" value="1" data-cesta-feira-item-id>
+                                    <input type="hidden" value="shirt adult columbus-indiana" name="item_type" data-cesta-feira-attribute>
+                                    <input type="submit" class="card-btn" value="Add to Cart">
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="shop-card col-md-4">
+                        <div class="card">
+                            <img class="card-img-top" src="img/HSG_shop_north_01.jpg" alt="Columbus North" width="278" height="293">
+                            <div class="card-body">
+                                <h4 class="card-title"> Ultra Cotton 6 oz. 
+                                    Long-Sleeve T-Shirt (CNHS) </h4>
+                                <p class="card-text">$24.00</p>
+                                <p class="card-colors"> 4 Colors Available </p>
+                            </div>
+                            <div class="card-footer">
+                                <hr class="card-shop-hr">
+                                <form action="#" class="form" data-cesta-feira-form>
+                                    <div class="form-group">
+                                        <input type="number" min="1" value="1" class="form-control" name="quantity" data-cesta-feira-attribute placeholder="Quantity">
+                                    </div>
+                                    <input type="hidden" value="Ultra Cotton 6 oz. 
+                                    Long-Sleeve T-Shirt (CNHS)" name="product_name" data-cesta-feira-attribute="">
+                                    <input type="hidden" value="20.00" name="unity_price" data-cesta-feira-attribute>
+                                    <input type="hidden" value="1" data-cesta-feira-item-id>
+                                    <input type="hidden" value="shirt adult columbus-indiana" name="item_type" data-cesta-feira-attribute>
+                                    <input type="submit" class="card-btn" value="Add to Cart">
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="shop-card col-md-4">
+                        <div class="card">
+                            <img class="card-img-top" src="img/HSG_shop_columbus_01.jpg" alt="Columbus Indiana Design 1821" width="278" height="293">
+                            <div class="card-body">
+                                <h4 class="card-title">Ultra Cotton 100% Cotton Long 
+                                    Sleeve T-Shirt (CNHS MDA)</h4>
+                                <p class="card-text">$24.00</p>
+                                <p class="card-colors"> 5 Colors Available </p>
+                            </div>
+                            <div class="card-footer">
+                                <hr class="card-shop-hr">
+                                <form action="#" class="form" data-cesta-feira-form>
+                                    <div class="form-group">
+                                        <input type="number" min="1" value="1" class="form-control" name="quantity" data-cesta-feira-attribute placeholder="Quantity">
+                                    </div>
+                                    <input type="hidden" value="Ultra Cotton 100% 
+                                    Long-Sleeve T-Shirt (CNHS)" name="product_name" data-cesta-feira-attribute="">
+                                    <input type="hidden" value="24.00" name="unity_price" data-cesta-feira-attribute>
+                                    <input type="hidden" value="1" data-cesta-feira-item-id>
+                                    <input type="hidden" value="shirt adult columbus-indiana" name="item_type" data-cesta-feira-attribute>
+                                    <input type="submit" class="card-btn" value="Add to Cart">
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+        </div>
+        <div class="row justify-content-md-center ">
+            <div class="shop-card col-md-4">
+                <div class="card">
+                   <a href="product1.html"><img class="card-img-top" src="img/HSG_shop_north_03.jpg" alt="Columbus Indiana Design 1821" width="278" height="293"></a>
+                    <div class="card-body">
+                        <a href="product1.html"><h4 class="card-title">Sport-Tek Posicharge Competitor 
+                            Tee (4008)</h4></a>
+                        <p class="card-text">$20.00</p>
+                        <p class="card-colors"> 49 Colors Available </p>
+                    </div>
+                    <div class="card-footer">
+                        <hr class="card-shop-hr">
+                        <form action="#" class="form" data-cesta-feira-form>
+                            <div class="form-group">
+                                <input type="number" min="1" value="1" class="form-control" name="quantity" data-cesta-feira-attribute placeholder="Quantity">
+                            </div>
+                            <input type="hidden" value="Sport-Tek Posicharge Competitor Tee" name="product_name" data-cesta-feira-attribute="">
+                            <input type="hidden" value="20.00" name="unity_price" data-cesta-feira-attribute>
+                            <input type="hidden" value="1" data-cesta-feira-item-id>
+                            <input type="hidden" value="shirt adult columbus-indiana" name="item_type" data-cesta-feira-attribute>
+                            <input type="submit" class="card-btn" value="Add to Cart">
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="shop-card col-md-4">
+                <div class="card">
+                    <img class="card-img-top" src="img/HSG_shop_north_04.jpg" alt="Columbus North TShirt" width="278" height="293">
+                    <div class="card-body">
+                        <h4 class="card-title"> Sport-Tek Posicharge Competitor Tee (CNHS FB) </h4>
+                        <p class="card-text">$24.00</p>
+                        <p class="card-colors"> 1 Colors Available </p>
+                    </div>
+                    <div class="card-footer">
+                        <hr class="card-shop-hr">
+                        <form action="#" class="form" data-cesta-feira-form>
+                            <div class="form-group">
+                                <input type="number" min="1" value="1" class="form-control" name="quantity" data-cesta-feira-attribute placeholder="Quantity">
+                            </div>
+                            <input type="hidden" value="Sport-Tek Posicharge Competitor Tee (CNHS FB)" name="product_name" data-cesta-feira-attribute="">
+                            <input type="hidden" value="20.00" name="unity_price" data-cesta-feira-attribute>
+                            <input type="hidden" value="1" data-cesta-feira-item-id>
+                            <input type="hidden" value="shirt adult columbus-indiana" name="item_type" data-cesta-feira-attribute>
+                            <input type="submit" class="card-btn" value="Add to Cart">
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="shop-card col-md-4">
+                <div class="card">
+                    <img class="card-img-top" src="img/HSG_shop_north_05.jpg" alt="Columbus Indiana Design 1821" width="278" height="293">
+                    <div class="card-body">
+                        <h4 class="card-title">Pennant Super-10 Hoodie (CNHS MDA)</h4>
+                        <p class="card-text">$45.00</p>
+                        <p class="card-colors"> 4 Colors Available </p>
+                    </div>
+                    <div class="card-footer">
+                        <hr class="card-shop-hr">
+                        <form action="#" class="form" data-cesta-feira-form>
+                            <div class="form-group">
+                                <input type="number" min="1" value="1" class="form-control" name="quantity" data-cesta-feira-attribute placeholder="Quantity">
+                            </div>
+                            <input type="hidden" value="Pennant Super-10 Hoodie (CNHS MDA)" name="product_name" data-cesta-feira-attribute="">
+                            <input type="hidden" value="20.00" name="unity_price" data-cesta-feira-attribute>
+                            <input type="hidden" value="1" data-cesta-feira-item-id>
+                            <input type="hidden" value="shirt adult columbus-indiana" name="item_type" data-cesta-feira-attribute>
+                            <input type="submit" class="card-btn" value="Add to Cart">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-md-center ">
+            <div class="shop-card col-md-4">
+                <div class="card">
+                   <a href="product1.html"><img class="card-img-top" src="img/HSG_shop_north_06.jpg" alt="Columbus Indiana Design 1821" width="278" height="293"></a>
+                    <div class="card-body">
+                        <a href="product1.html"><h4 class="card-title">Russell Men's Fleece Crew Neck 
+                            Sweatshirt (4037)</h4></a>
+                        <p class="card-text">$20.00</p>
+                        <p class="card-colors"> 49 Colors Available </p>
+                    </div>
+                    <div class="card-footer">
+                        <hr class="card-shop-hr">
+                        <form action="#" class="form" data-cesta-feira-form>
+                            <div class="form-group">
+                                <input type="number" min="1" value="1" class="form-control" name="quantity" data-cesta-feira-attribute placeholder="Quantity">
+                            </div>
+                            <input type="hidden" value="Russell Men's Fleece Crew Neck Sweatshirt (4037)" name="product_name" data-cesta-feira-attribute="">
+                            <input type="hidden" value="20.00" name="unity_price" data-cesta-feira-attribute>
+                            <input type="hidden" value="1" data-cesta-feira-item-id>
+                            <input type="hidden" value="shirt adult columbus-indiana" name="item_type" data-cesta-feira-attribute>
+                            <input type="submit" class="card-btn" value="Add to Cart">
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="shop-card col-md-4">
+                <div class="card">
+                    <a href="product2.html"><img class="card-img-top" src="img/HSG_shop_north_07.jpg" alt="Columbus North TShirt" width="278" height="293"></a>
+                    <div class="card-body">
+                        <a href="product2.html"><h4 class="card-title"> True Royal Heather Sport-Tek 
+                            Heather Contender Tee (4008) </h4></a>
+                        <p class="card-text">$27.00</p>
+                        <p class="card-colors"> 4 Colors Available </p>
+                    </div>
+                    <div class="card-footer">
+                        <hr class="card-shop-hr">
+                        <form action="#" class="form" data-cesta-feira-form>
+                            <div class="form-group">
+                                <input type="number" min="1" value="1" class="form-control" name="quantity" data-cesta-feira-attribute placeholder="Quantity">
+                            </div>
+                            <input type="hidden" value="True Royal Heather Sport-Tek Heather Contender Tee" name="product_name" data-cesta-feira-attribute="">
+                            <input type="hidden" value="20.00" name="unity_price" data-cesta-feira-attribute>
+                            <input type="hidden" value="1" data-cesta-feira-item-id>
+                            <input type="hidden" value="shirt adult columbus-indiana" name="item_type" data-cesta-feira-attribute>
+                            <input type="submit" class="card-btn" value="Add to Cart">
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="shop-card col-md-4">
+                <div class="card">
+                    <img class="card-img-top" src="img/HSG_shop_east_01.jpg" alt="Columbus Indiana Design 1821" width="278" height="293">
+                    <div class="card-body">
+                        <h4 class="card-title">Dark Chocolate Gildan Ultra Cotton 
+                            100% Cotton T-Shirt (3508)</h4>
+                        <p class="card-text">$45.00</p>
+                        <p class="card-colors"> 4 Colors Available </p>
+                    </div>
+                    <div class="card-footer">
+                        <hr class="card-shop-hr">
+                        <form action="#" class="form" data-cesta-feira-form>
+                            <div class="form-group">
+                                <input type="number" min="1" value="1" class="form-control" name="quantity" data-cesta-feira-attribute placeholder="Quantity">
+                            </div>
+                            <input type="hidden" value="Dark Chocolate Gildan Ultra Cotton 
+                            100% Cotton T-Shirt" name="product_name" data-cesta-feira-attribute="">
+                            <input type="hidden" value="20.00" name="unity_price" data-cesta-feira-attribute>
+                            <input type="hidden" value="1" data-cesta-feira-item-id>
+                            <input type="hidden" value="shirt adult columbus-indiana" name="item_type" data-cesta-feira-attribute>
+                            <input type="submit" class="card-btn" value="Add to Cart">
+                        </form>
+                    </div>
+                </div>
+            </div>
+    </div>
+    </div>
+    
+        <nav aria-label="..." class="shop-pages">
+            <ul class="pagination justify-content-end">
+              <li class="page-item disabled">
+                <a class="page-link" href="#" tabindex="-1">Previous</a>
+              </li>
+              <li class="page-item active"><a class="page-link" href="#">1</a></li>
+              <li class="page-item">
+                <a class="page-link" href="#">2 <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="page-item"><a class="page-link" href="#">3</a></li>
+              <li class="page-item">
+                <a class="page-link" href="#">Next</a>
+              </li>
+            </ul>
+          </nav>
+
+          <footer class="footer">
+            <div class="footer-flex-container">
+                <img class="footer-flex-item1" src="img/HSG_Logo.svg" alt="HSG Logo">
+                <div class="footer-flex-item2">
+                    <div class="footer-info">
+                        <ul class="footer-nav">
+                            <li><a href="contact.html">Contact </a></li>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="shop.html"> Shop</a></li>
+                        </ul>
+                        <ul class="social-nav">
+                            <li> <a href="https://www.facebook.com/p/Hoosier-Sporting-Goods-100057117083265/"><i class="fa-brands fa-facebook"></i></a></li>
+                            <li> <i class="fa-brands fa-instagram"></i></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>

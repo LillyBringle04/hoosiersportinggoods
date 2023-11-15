@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="Hoosier Sporting Goods">
+        <meta name="keywords" content="Columbus, Indiana, local, business, sports, schools, gear, Hoosier Sporting Goods">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <title> HSG - Services </title>
+        <!-- Link to CSS files -->
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/shop-style.css">
+        <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+        <!-- Additional JS Files -->
+        <script src="js/carouselscript.js"></script>
+        <!-- Link for FontAwesome Icons -->
+        <script src="https://kit.fontawesome.com/1f757a6e4f.js" crossorigin="anonymous"></script>
+    </head>
+
+    <body>
+        <header> 
+            <div class="top-nav">
+                <a href="index.html"><img class="navitem1" src="img/HSG_Logo.svg" alt="HSG Logo"> </a>
+                <div class="navitem2">
+                    <form action="shop.html">
+                        <input type="text" id="SearchInput" placeholder="I'm shopping for.." name="search">
+                        <button type="submit" class="search-submit" onclick="window.location.href=shop.html"><i class="fa fa-search"></i></button>
+                    </form>
+                </div>
+                <div class="navitem3">
+                    <a class="nav-link cart-item-count" href="cart.html" data-cesta-feira-items-count><span
+                        class="fa fa-shopping-cart"></span></a>
+                        <a class="nav-link cart-item-count" href="account.html" data-cesta-feira-items-count><span
+                            class="fa fa-user"></span></a>
+                </div>
+            </div> 
+
+            <nav class="bottom-nav">
+                <ul> 
+                    <li> <a href="shop.html">Womens</a></li>
+                    <li> <a href="shop.html">Men</a></li>
+                    <li> <a href="shop.html">Youth</a></li>
+                    <li> <a href="shop.html">Accessories</a></li>
+                    <li> <a href="shop.html">Schools</a></li>
+                    <li> <a href="shop.html">Sports</a></li>
+                </ul>
+            </nav>
+
+    <!-- Responsive Navigation for 768px or Smaller -->
+            <div class="res-nav">
+                <div class="res-top-nav">
+                    <div class="res-flex-item1">
+                        <div class="resnav">
+                            <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+                            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                              <i class="fa fa-bars"></i>
+                            </a>
+
+                            <!-- Navigation links (hidden by default) -->
+                            <div id="myLinks">
+                                <a href="shop.html">Womens</a>
+                                <a href="shop.html">Men</a>
+                                <a href="shop.html">Youth</a>
+                                <a href="shop.html">Accessories</a>
+                                <a href="shop.html">Schools</a>
+                                <a href="shop.html">Sports</a>
+                            </div>
+                        </div>                          
+                    </div>
+                    <div class="res-flex-item2">
+                        <img src="img/HSG_Logo.svg" alt="HSG Logo"> 
+                    </div>
+                    <div class="res-flex-item3"> 
+                        <a class="nav-link cart-item-count" href="cart.html" data-cesta-feira-items-count><span
+                            class="fa fa-shopping-cart"></span></a>
+                        <a class="nav-link cart-item-count" href="account.html" data-cesta-feira-items-count><span
+                                class="fa fa-user"></span></a>
+                    </div>
+                </div>
+
+                <div class="res-search">
+                    <form action="/action_page.php">
+                        <input type="text" placeholder="I'm shopping for.." name="search">
+                        <button type="submit"><i class="fa fa-search"></i></button>
+                    </form>
+                </div>
+            </div>
+        </header>
+
+        <section class="services-hero">
+            <h1 class="hsg-h1"> SERVICES </h1>
+            <hr class="hsg-hr-orange">
+            <p class="hsg-p">
+                Here at Hoosier Sporting Goods, we are more than just a one-stop shop for all your sporting good needs. We offer a variety of custom services including print, engraving, and more!
+            </p>
+        </section>
+
+        <section class="services">
+            <h1 class="hsg-h1"> OUR SERVICES</h1>
+            <hr class="hsg-hr-orange">
+            <h3 class="hsg-h3"> Per Category </h3>
+
+            <div class="services-wrapper">
+                <ul class="carousel">
+                    <li class="card"> 
+                        <div class="img">
+                            <img src="img/HSG_ServiceCarousel1.jpg" alt="Service" draggable="false" width="200" height="200">
+                        </div>
+                        <h2> Service</h2>
+                    </li>
+                    <li class="card"> 
+                        <div class="img">
+                            <img src="img/HSG_ServiceCarousel1.jpg" alt="Print Service" draggable="false" width="200" height="200">
+                        </div>
+                        <h2> Print</h2>
+                    </li>
+                    <li class="card"> 
+                        <div class="img">
+                            <img src="img/HSG_ServiceCarousel2.jpg" alt="Tshirt Service" draggable="false" width="200" height="200">
+                        </div>
+                        <h2> T-Shirts</h2>
+                    </li>
+                    <li class="card"> 
+                        <div class="img">
+                            <img src="img/HSG_ServiceCarousel3.jpg" alt="Hat Service" draggable="false" width="200" height="200">
+                        </div>
+                        <h2> Hats</h2>
+                    </li>
+                    <li class="card"> 
+                        <div class="img">
+                            <img src="img/HSG_ServiceCarousel4.jpg" alt="Cup Service" draggable="false" width="200" height="200">
+                        </div>
+                        <h2> Cups</h2>
+                    </li>
+                    <li class="card"> 
+                        <div class="img">
+                            <img src="img/HSG_ServiceCarousel5.jpg" alt="Engraving Service" draggable="false" width="200" height="200">
+                        </div>
+                        <h2> Engraving</h2>
+                    </li>
+                    <li class="card"> 
+                        <div class="img">
+                            <img src="img/HSG_ServiceCarousel6.jpg" alt="Bows Service" draggable="false" width="200" height="200">
+                        </div>
+                        <h2> Bows</h2>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="service-cnt">
+            <h1 class="hsg-h1"> A SERVICE FOR EVERY NEED </h1>
+            <p class="hsg-p"> Don’t see a service? Odds are we have it!
+                Contact us below to discuss other special services. </p>
+            <a href="contact.html" class="cnt-btn">CONTACT US</a>
+        </section>
+
+        <section class="shop-services">
+            <h1 class="hsg-h1"> SHOP OUR SERVICES </h1>
+            <hr class="hsg-hr-blue">
+            <div class="shop-flex-container">
+                <div class="shop-flex-item1">
+                    <img src="img/HSG_ServiceCarousel5.jpg" alt="Engraving" width="204" height="204"> 
+                    <hr>
+                    <h3> ENGRAVING </h3>
+                    <a href="shop.html" class="shop-btn">SHOP NOW</a>
+                </div>
+                <div class="shop-flex-item2">
+                    <img src="img/HSG_ServiceCarousel1.jpg" alt="Engraving" width="204" height="204"> 
+                    <hr>
+                    <h3> PRINT </h3>
+                    <a href="shop.html" class="shop-btn">SHOP NOW</a>
+                </div>
+                <div class="shop-flex-item3">
+                    <img src="img/HSG_ServiceCarousel3.jpg" alt="Engraving" width="204" height="204"> 
+                    <hr>
+                    <h3> HATS </h3>
+                    <a href="shop.html" class="shop-btn">SHOP NOW</a>
+                </div>
+                <div class="shop-flex-item4">
+                    <img src="img/HSG_ServiceCarousel5.jpg" alt="Engraving" width="204" height="204"> 
+                    <hr>
+                    <h3> CUPS </h3>
+                    <a href="shop.html" class="shop-btn">SHOP NOW</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta">
+            <div class="cta-flex-container">
+                <div class="cta-flex-item1">
+                    <h3 class="hsg-h3"> CONTACT US</h3>
+                    <h2 class="hsg-h2"> Have a question?</h2>
+                    <p class="hsg-p"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                        In tempor ut ante ut dictum. Morbi lobortis congue tincidunt. </p>
+                </div>
+                <div class="cta-flex-item1">
+                    <a href="contact.html" class="hsg-btn">CONTACT US</a>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <div class="footer-flex-container">
+                <img class="footer-flex-item1" src="img/HSG_Logo.svg" alt="HSG Logo">
+                <div class="footer-flex-item2">
+                    <div class="footer-info">
+                        <ul class="footer-nav">
+                            <li><a href="contact.html">Contact </a></li>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="shop.html"> Shop</a></li>
+                        </ul>
+                        <ul class="social-nav">
+                            <li> <a href="https://www.facebook.com/p/Hoosier-Sporting-Goods-100057117083265/"><i class="fa-brands fa-facebook"></i></a></li>
+                            <li> <i class="fa-brands fa-instagram"></i></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+    </body>
+</html>

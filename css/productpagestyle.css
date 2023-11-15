@@ -1,0 +1,311 @@
+/*Main Colors 
+    Navy Blue #0E2332
+
+    Cyan Blue #1398A8 
+
+    Dark Orange #EA443A 
+
+    Light Orange #FF8853 
+
+    Off White #F3F3F3 
+*/
+
+.product-flex-container {
+    display: flex;
+    flex-direction: row;
+    max-width: 960px;
+    margin: 3em auto;
+    align-items: center;
+    gap: 1em;
+}
+
+.product-name h1 {
+    color: #0E2332;
+    font-family: Inter;
+    font-size: 2rem;
+    text-align: left;
+}
+
+.product-price {
+    color: #0E2332;
+    font-family: Maitree;
+    font-size: 1.25rem;
+    text-align: left;
+}
+
+.product-desc {
+    color: #0E2332;
+    font-family: Maitree;
+    font-size: 0.875rem;    
+    text-align: left;
+}
+
+.product-btn {
+    width: 18.4375rem;
+}
+
+.size-container h3 {
+    color: #0E2332;
+    text-align: center;
+    font-family: Inter;
+    font-size: 1.25rem;
+}
+
+.size-container {
+    display: flex;
+    flex-direction: row;
+    margin: 1rem;
+}
+
+.size-xsmall, .size-small, .size-med, .size-lg, .size-xlg    {
+    width: 3.4375rem;
+    height: 3.4375rem;
+    background-color: #D9D9D9;
+    border-radius: 100%;
+    margin: 0.5rem;
+    padding: 1rem;
+    text-align: center;
+}
+
+.size-xsmall:hover, .size-small:hover, .size-med:hover, .size-lg:hover, .size-xlg:hover {
+    border: 2px #0E2332 solid;
+} 
+
+.color-container h3 {
+    color: #0E2332;
+    text-align: center;
+    font-family: Inter;
+    font-size: 1.25rem;
+}
+
+.color-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 1rem;
+}
+
+.color-red {
+    width: 3.4375rem;
+    height: 3.4375rem;
+    background-color: #E9443A;
+    border-radius: 100%;
+    margin: 0.5rem;
+}
+
+.color-orange {
+    width: 3.4375rem;
+    height: 3.4375rem;
+    background-color: #FF8853;
+    border-radius: 100%;
+    padding: 1rem;
+    margin: 0.5rem;
+}
+
+.color-yellow {
+    width: 3.4375rem;
+    height: 3.4375rem;
+    background-color: gold;
+    border-radius: 100%;
+    padding: 1rem;
+    margin: 0.5rem;
+}
+
+.color-green {
+    width: 3.4375rem;
+    height: 3.4375rem;
+    background-color: #7BF25D;
+    border-radius: 100%;
+    padding: 1rem;
+    margin: 0.5rem;
+}
+
+.color-blue {
+    width: 3.4375rem;
+    height: 3.4375rem;
+    background-color: #79A7FF;
+    border-radius: 100%;
+    padding: 1rem;
+    margin: 0.5rem;
+}
+
+.color-purple {
+    width: 3.4375rem;
+    height: 3.4375rem;
+    background-color: purple;
+    border-radius: 100%;
+    padding: 1rem;
+    margin: 0.5rem;
+}
+
+.color-white {
+    width: 3.4375rem;
+    height: 3.4375rem;
+    background-color: #f3f3f3;
+    border-radius: 100%;
+    border: #D9D9D9 solid 2px;
+    padding: 1rem;
+    margin: 0.5rem;
+}
+
+.color-grey {
+    width: 3.4375rem;
+    height: 3.4375rem;
+    background-color: #D9D9D9;
+    border-radius: 100%;
+    padding: 1rem;
+    margin: 0.5rem;
+}
+
+.color-black {
+    width: 3.4375rem;
+    height: 3.4375rem;
+    background-color: black;
+    border-radius: 100%;
+    padding: 1rem;
+    margin: 0.5rem;
+}
+
+.color-red:hover, .color-orange:hover, .color-yellow:hover, .color-green:hover, .color-blue:hover, .color-purple:hover, 
+.color-white:hover, .color-grey:hover, .color-black:hover {
+    border: 2px #0E2332 solid;
+} 
+
+
+.similar-flex-container, .popular-flex-container {
+    margin: 2rem auto;
+    max-width: 960px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    text-align: center;
+}
+
+.similar-flex-item1, .similar-flex-item2, .similar-flex-item3, .similar-flex-item4,
+.popular-flex-item1, .popular-flex-item2, .popular-flex-item3, .popular-flex-item4 {
+    padding:1em;
+}
+
+.similar-flex-container img, .popular-flex-container img {
+    border: 1px #0E2332 solid;
+}
+
+.similar-flex-container h3, .popular-flex-container h3  {
+    color: #0E2332;
+    font-family: Inter;
+    font-size: 1rem;
+}
+
+.product-specs {
+    max-width: 960px;
+    margin: 2em auto;
+    text-align: left;
+    border: 2px #D9D9D9 solid;
+}
+
+.product-specs h1 {
+    padding: 1em;
+    color: #0E2332;
+    text-align: center;
+    font-family: Inter;
+    font-size: 1.5rem;
+}
+
+.product-specs h2 {
+    color: #0E2332;
+    font-family: Maitree;
+    font-size: 1.125rem;
+    padding-left: 1.125rem;
+    font-weight: bold;
+}
+
+.product-specs ul {
+    color: #0E2332;
+    font-family: Maitree;
+    font-size: 1.125rem;
+    font-weight: 500;
+    padding-left: 1.125rem;
+    margin: 1em;
+}
+
+.product-specs .spec-note {
+    margin: 2em 0;
+    font-family: Maitree;
+    font-size: 1rem;
+    color: #0E2332;
+    padding-left: 1.125rem;
+    display: block;
+}
+
+@media only screen and (min-width: 300px) {
+    .product-flex-container {
+        flex-direction: column;
+        max-width: 960px;
+        margin: 2em auto;
+    }
+
+    .similar-flex-container, .popular-flex-container {
+        flex-direction: column;
+        margin: 0 auto;
+        justify-content: space-evenly;
+    }
+}
+
+@media only screen and (min-width: 576px) {
+    .product-flex-container {
+        margin: 2rem auto;
+        max-width: 960px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+    .similar-flex-container, .popular-flex-container {
+        flex-direction: column;
+        margin: 0 auto;
+        justify-content: space-evenly;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .product-flex-container {
+        margin: 2rem auto;
+        max-width: 960px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+    .similar-flex-container, .popular-flex-container {
+        flex-direction: column;
+        margin: 0 auto;
+        justify-content: space-evenly;
+    }
+
+}
+
+@media only screen and (min-width: 992px) {
+    .product-flex-container {
+        flex-direction: row;
+    }
+
+    .similar-flex-container, .popular-flex-container {
+        flex-direction: row;
+        margin: 0 auto;
+        justify-content: space-evenly;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .product-flex-container {
+        flex-direction: row;
+    }
+
+    .similar-flex-container, .popular-flex-container {
+        flex-direction: row;
+        margin: 0 auto;
+        justify-content: space-evenly;
+    }
+}
+
+

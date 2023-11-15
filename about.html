@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="Hoosier Sporting Goods">
+        <meta name="keywords" content="Columbus, Indiana, local, business, sports, schools, gear, Hoosier Sporting Goods">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <title> HSG - About Us </title>
+        <!-- Link to CSS files -->
+        <link rel="stylesheet" href="css/main.css">
+        <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+        <script src="js/script.js"></script>
+        <!-- jQuery library (served from CloudFlare) -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+        <!-- jStorage library (served from CloudFlare) -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jStorage/0.4.12/jstorage.min.js"></script>
+        <!-- Cesta-Feira Javascript file -->
+        <script src="js/dist/cesta-feira.min.js"></script>
+        <script src="js/dist/cesta-feira.js"></script>
+        <script src="js/shop-script.js"></script>
+        <script src="js/shop-filter-script.js"></script>
+        <!-- Link for FontAwesome Icons -->
+        <script src="https://kit.fontawesome.com/1f757a6e4f.js" crossorigin="anonymous"></script>
+    </head>
+
+<body>
+    <header> 
+        <div class="top-nav">
+            <a href="index.html"><img class="navitem1" src="img/HSG_Logo.svg" alt="HSG Logo"> </a>
+            <div class="navitem2">
+                <form action="shop.html">
+                    <input type="text" id="SearchInput" placeholder="I'm shopping for.." name="search">
+                    <label for="SearchInput" title="Search Input"></label>
+                    <button class="search-submit" onclick="window.location.href=shop.html"> <i class="fa fa-search"> </i> </button>
+                </form>
+            </div>
+            <div class="navitem3">
+                <a class="nav-link cart-item-count" href="cart.html" data-cesta-feira-items-count><span
+                    class="fa fa-shopping-cart"></span></a>
+                    <a class="nav-link cart-item-count" href="account.html" data-cesta-feira-items-count><span
+                        class="fa fa-user"></span></a>
+            </div>
+        </div> 
+
+        <nav class="bottom-nav">
+            <ul> 
+                <li> <a href="shop.html">Womens</a></li>
+                <li> <a href="shop.html">Men</a></li>
+                <li> <a href="shop.html">Youth</a></li>
+                <li> <a href="shop.html">Accessories</a></li>
+                <li> <a href="shop.html">Schools</a></li>
+                <li> <a href="shop.html">Sports</a></li>
+            </ul>
+        </nav>
+
+<!-- Responsive Navigation for 768px or Smaller -->
+        <div class="res-nav">
+            <div class="res-top-nav">
+                <div class="res-flex-item1">
+                    <div class="resnav">
+                        <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+                        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                          <i class="fa fa-bars"></i>
+                        </a>
+
+                        <!-- Navigation links (hidden by default) -->
+                        <div id="myLinks">
+                            <a href="shop.html">Womens</a>
+                            <a href="shop.html">Men</a>
+                            <a href="shop.html">Youth</a>
+                            <a href="shop.html">Accessories</a>
+                            <a href="shop.html">Schools</a>
+                            <a href="shop.html">Sports</a>
+                        </div>
+                    </div>                          
+                </div>
+                <div class="res-flex-item2">
+                    <img src="img/HSG_Logo.svg" alt="HSG Logo"> 
+                </div>
+                <div class="res-flex-item3"> 
+                    <a class="nav-link cart-item-count" href="cart.html" data-cesta-feira-items-count><span
+                        class="fa fa-shopping-cart"></span></a>
+                    <a class="nav-link cart-item-count" href="account.html" data-cesta-feira-items-count><span
+                            class="fa fa-user"></span></a>
+                </div>
+            </div>
+
+            <div class="res-search">
+                <form action="/action_page.php">
+                    <input type="text" placeholder="I'm shopping for.." name="search">
+                    <button type="submit"><i class="fa fa-search"></i></button>
+                </form>
+            </div>
+        </div>
+    </header>
+
+    <!-- Story Section -->
+    <div class="story">
+        <h1 class="hsg-h1"> OUR STORY </h1>
+        <img src="img/HSG.jpg" alt="Hoosier Sporting Goods" width="780" height="441">
+        <p class="hsg-p"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vitae magna et nunc convallis venenatis aliquam id erat. Nullam sed nunc in felis gravida lobortis sit amet sed lectus. Nam feugiat urna vitae metus pulvinar faucibus. Suspendisse sit amet ante orci. Pellentesque et nisi sapien. Praesent sollicitudin nibh eu leo porta, eget viverra ex molestie. Etiam vel vehicula sem, at volutpat risus. Nunc sit amet lorem posuere lacus tincidunt auctor vel ac diam. In quis tincidunt nunc. Fusce nec ultricies mauris, nec iaculis mi. Donec eget sapien dui. Aliquam bibendum quam dui, sit amet venenatis sapien placerat quis. Etiam sed libero nec lacus hendrerit convallis nec vitae quam.</p>
+    </div>
+
+    <!-- Vision Section-->
+    <div class="vision">
+        <h1 class="hsg-h1"> OUR VISION </h1>
+        <hr class="hsg-hr-orange">
+        <p class="hsg-p"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vitae magna et nunc convallis venenatis aliquam id erat. Nullam sed nunc in felis gravida lobortis sit amet sed lectus. Nam feugiat urna vitae metus pulvinar faucibus. Suspendisse sit amet ante orci. Pellentesque et nisi sapien. Praesent sollicitudin nibh eu leo porta, eget viverra ex molestie. Etiam vel vehicula sem, at volutpat risus.</p>
+    </div>
+
+    <div class="vision-flex-container">
+        <div class="vision-flex-item1">
+            <div class="text-container">
+                <img src="img/HSG_About1.jpg" alt="Community" width="300" height="300">
+                <h3 class="text-centered"> COMMUNITY</h3>
+            </div>
+        </div>
+        <div class="vision-flex-item2">
+            <div class="text-container">
+                <img src="img/HSG_About2.jpg" alt="Quality Shoes" width="300" height="300">
+                <h3 class="text-centered"> QUALITY</h3>
+            </div>
+        </div>
+        <div class="vision-flex-item3">
+            <div class="text-container">
+                <img src="img/HSG_About3.jpg" alt="Community" width="300" height="300">
+                <h3 class="text-centered"> LOCAL </h3>
+            </div>
+        </div>
+    </div>
+
+    <!-- MISSION -->
+    <div class="mission">
+        <h1 class="hsg-h1"> OUR MISSION </h1>
+        <hr class="hsg-hr-orange">
+        <p class="hsg-p"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vitae magna et nunc convallis venenatis aliquam id erat. Nullam sed nunc in felis gravida lobortis sit amet sed lectus. Nam feugiat urna vitae metus pulvinar faucibus. Suspendisse sit amet ante orci. Pellentesque et nisi sapien. Praesent sollicitudin nibh eu leo porta, eget viverra ex molestie. Etiam vel vehicula sem, at volutpat risus.</p>
+    </div>
+
+    <!-- Community -->
+    <div class="community">
+        <h1 class="hsg-h1"> OUR COMMUNITY IMPACT </h1>
+        <hr class="hsg-hr-orange">
+        <p class="hsg-p"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vitae magna et nunc convallis venenatis aliquam id erat. Nullam sed nunc in felis gravida lobortis sit amet sed lectus. Nam feugiat urna vitae metus pulvinar faucibus. Suspendisse sit amet ante orci. Pellentesque et nisi sapien. Praesent sollicitudin nibh eu leo porta, eget viverra ex molestie. Etiam vel vehicula sem, at volutpat risus.</p>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-flex-container">
+            <img class="footer-flex-item1" src="img/HSG_Logo.svg" alt="HSG Logo">
+            <div class="footer-flex-item2">
+                <div class="footer-info">
+                    <ul class="footer-nav">
+                        <li><a href="contact.html">Contact </a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="shop.html"> Shop</a></li>
+                    </ul>
+                    <ul class="social-nav">
+                        <li> <a href="https://www.facebook.com/p/Hoosier-Sporting-Goods-100057117083265/"><i class="fa-brands fa-facebook"></i></a></li>
+                        <li> <i class="fa-brands fa-instagram"></i></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

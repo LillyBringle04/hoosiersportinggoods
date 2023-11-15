@@ -1,0 +1,172 @@
+/* Contact Hero CSS */
+#hero-contact {
+    background-image: url("../img/HSG_contact_hero.jpg");
+    background-repeat: no-repeat;
+	background-size: cover; 
+	max-height: 600px; 
+    margin-bottom: 2em;
+}
+
+.hero-container {
+    margin: 0 auto;
+    max-width: 960px;
+    padding: 4em;
+    background-color: rgba(243, 243, 243, 0.25);
+    margin-bottom: 2em;
+}
+
+.contact-button-container {
+     max-width: 960px;
+     margin: 0 auto;
+     text-align: center;
+}
+
+.cnct-btn {
+    background-color: #ffffff; 
+    border: 2px #EA443A solid ;
+    color: #EA443A;
+    padding: 15px 32px;
+    font-family: 'Inter', Arial, sans-serif;
+    font-size: 1.125rem;
+    font-weight: 700;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-bottom: 2em;
+
+}
+
+.cnct-btn:hover {
+    background-color: #EA443A; 
+    border: 2px #EA443A solid ;
+    color: #ffffff;
+}
+
+.hero-container h1 {
+    color: #f3f3f3;
+}
+
+.contactflexcontainer {
+    max-width: 960px !important;
+}
+
+
+.form-text {
+    flex-shrink: 0;
+    font-family: 'Maitree', Times, serif;
+    max-width: 40%;
+}
+
+.contact-form-info h1 {
+    text-align: left;
+    margin-bottom: 1em;
+}
+
+.form_info p {
+    font-family: 'Maitree', Times, serif;
+    font-style: normal;
+    font-weight: 400;
+    color: #0E2332;
+    font-size: 1rem;
+    line-height: 2em;
+}
+
+.store-info p {
+    font-family: 'Maitree', Times, serif;
+    font-size: 1em;
+    font-weight: 200;
+}
+
+.store-info {
+    margin-top: 8em;
+}
+
+/* Contact Form */
+
+.form-group {
+    margin: 1em 0em 1em 0em;
+}
+
+.form-group label {
+    color: #0E2332;
+    font-family: 'Inter', Arial, sans-serif;
+    font-weight: 700;
+}
+
+
+form {
+	margin: 2em 0;
+}
+
+/* Media Queries */
+@media only screen and (min-width: 300px) {
+    .contact-form-info {
+        text-align: center;
+    }
+
+    .contact-form-info h1 {
+        text-align: center;
+    }
+    
+    .contact-form {
+        text-align: center;
+    }
+}
+
+@media only screen and (min-width: 576px) {
+    .contact-form-info {
+        text-align: center;
+    }
+
+    .contact-form-info h1 {
+        text-align: center;
+    }
+    
+    .contact-form {
+        text-align: center;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+.contact-form-info {
+    text-align: left;
+}
+
+.contact-form-info h1 {
+    text-align: left;
+}
+
+.contact-form {
+    text-align: left;
+}
+
+}
+
+@media only screen and (min-width: 992px) {
+    .contact-form-info {
+        text-align: left;
+    }
+
+    .contact-form-info h1 {
+        text-align: left;
+    }
+    
+    .contact-form {
+        text-align: left;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .contact-form-info {
+        text-align: left;
+    }
+
+    .contact-form-info h1 {
+        text-align: left;
+    }
+    
+    .contact-form {
+        text-align: left;
+    }
+}

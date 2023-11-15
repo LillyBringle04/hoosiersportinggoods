@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="Hoosier Sporting Goods">
+        <meta name="keywords" content="Columbus, Indiana, local, business, sports, schools, gear, Hoosier Sporting Goods">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <title> HSG - Product 2 </title>
+        <!-- Link to CSS files -->
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/productpagestyle.css">
+        <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+        <!-- jQuery library (served from CloudFlare) -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+        <!-- jStorage library (served from CloudFlare) -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jStorage/0.4.12/jstorage.min.js"></script>
+        <!-- Cesta-Feira Javascript file -->
+        <script src="js/dist/cesta-feira.min.js"></script>
+        <script src="js/dist/cesta-feira.js"></script>
+        <!-- Additional JS Files -->
+        <script src="js/carouselscript.js"></script>
+        <script src="js/shop-script.js"></script>
+        <script src="js/shop-filter-script.js"></script>
+        <!-- Link for FontAwesome Icons -->
+        <script src="https://kit.fontawesome.com/1f757a6e4f.js" crossorigin="anonymous"></script>
+    </head>
+
+    <body>
+        <header> 
+            <div class="top-nav">
+                <a href="index.html"><img class="navitem1" src="img/HSG_Logo.svg" alt="HSG Logo"> </a>
+                <div class="navitem2">
+                    <form action="shop.html">
+                        <input type="text" id="SearchInput" placeholder="I'm shopping for.." name="search">
+                        <button type="submit" class="search-submit" onclick="window.location.href=shop.html"><i class="fa fa-search"></i></button>
+                    </form>
+                </div>
+                <div class="navitem3">
+                    <a class="nav-link cart-item-count" href="cart.html" data-cesta-feira-items-count><span
+                        class="fa fa-shopping-cart"></span></a>
+                        <a class="nav-link cart-item-count" href="account.html" data-cesta-feira-items-count><span
+                            class="fa fa-user"></span></a>
+                </div>
+            </div> 
+
+            <nav class="bottom-nav">
+                <ul> 
+                    <li> <a href="shop.html">Womens</a></li>
+                    <li> <a href="shop.html">Men</a></li>
+                    <li> <a href="shop.html">Youth</a></li>
+                    <li> <a href="shop.html">Accessories</a></li>
+                    <li> <a href="shop.html">Schools</a></li>
+                    <li> <a href="shop.html">Sports</a></li>
+                </ul>
+            </nav>
+
+    <!-- Responsive Navigation for 768px or Smaller -->
+            <div class="res-nav">
+                <div class="res-top-nav">
+                    <div class="res-flex-item1">
+                        <div class="resnav">
+                            <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+                            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                              <i class="fa fa-bars"></i>
+                            </a>
+
+                            <!-- Navigation links (hidden by default) -->
+                            <div id="myLinks">
+                                <a href="shop.html">Womens</a>
+                                <a href="shop.html">Men</a>
+                                <a href="shop.html">Youth</a>
+                                <a href="shop.html">Accessories</a>
+                                <a href="shop.html">Schools</a>
+                                <a href="shop.html">Sports</a>
+                            </div>
+                        </div>                          
+                    </div>
+                    <div class="res-flex-item2">
+                        <img src="img/HSG_Logo.svg" alt="HSG Logo"> 
+                    </div>
+                    <div class="res-flex-item3"> 
+                        <a class="nav-link cart-item-count" href="cart.html" data-cesta-feira-items-count><span
+                            class="fa fa-shopping-cart"></span></a>
+                        <a class="nav-link cart-item-count" href="account.html" data-cesta-feira-items-count><span
+                                class="fa fa-user"></span></a>
+                    </div>
+                </div>
+
+                <div class="res-search">
+                    <form action="/action_page.php">
+                        <input type="text" placeholder="I'm shopping for.." name="search">
+                        <button type="submit"><i class="fa fa-search"></i></button>
+                    </form>
+                </div>
+            </div>
+        </header>
+
+        <div class="product-flex-container">
+            <div class="product-flex-item-1">
+                <img src="img/HSG_shop_north_07.jpg" alt="Columbus North Longsleeve" width="300" height="300">
+            </div>
+            <div class="product-flex-item-2">
+                <div class="product-name">
+                    <h1> True Royal Heather Sport-Tek Heather Contender Tee (4008)</h1>
+                </div>
+                <div class="product-price">
+                    <span> $27 </span>
+                </div>
+                <div class="product-desc">
+                    <p> An indispensable t-shirt in our classic silhouette and with a very friendly price.</p>
+                </div>
+                <div class="product-size">
+                    <div class="size-container">
+                        <div class="size-xsmall">
+                            <h3> XS </h3>
+                        </div>
+                        <div class="size-small">
+                            <h3>  S </h3>
+                        </div>
+                        <div class="size-med">
+                            <h3> M </h3>
+                        </div>
+                        <div class="size-lg">
+                            <h3> L </h3>
+                        </div>
+                        <div class="size-xlg">
+                            <h3> XL </h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-color">
+                    <div class="color-container">
+                        <div class="color-blue"> </div>
+                        <div class="color-white"></div>
+                        <div class="color-grey"></div>
+                        <div class="color-black"> </div>
+                    </div>
+                </div>
+                <div class="cart">
+                    <div class="form-group">
+                        <input type="number" min="1" value="1" class="form-control" name="quantity" data-cesta-feira-attribute placeholder="Quantity">
+                    </div>
+                    <input type="submit" class="hsg-btn product-btn" value="Add to Cart">
+                </div>
+            </div>
+        </div>
+
+        <h1 class="hsg-h1"> SIMILAR</h1>
+
+        <div class="similar-flex-container">            
+            <div class="similar-flex-item1">
+                <img src="img/HSG_shop_columbus_02.jpg" alt="Columbus Indiana Longsleeve" width="220" height="220">
+                <h3> Port & Company Long Sleeve Core Cotton Tee Patch Logoe </h3>
+            </div>
+            <div class="similar-flex-item2">
+                <img src="img/HSG_shop_columbus_03.jpg" alt="Columbus Indiana Longsleeve 1821" width="220" height="220">
+                <h3> Port & Company Core Cotton Tee 1821 - Columbus Indiana </h3>
+            </div>
+            <div class="similar-flex-item3">
+                <img src="img/HSG_shop_columbus_04.jpg" alt="Columbus Indiana T-Shirt" width="220" height="220">
+                <h3> Port & Company Long Sleeve Core Cotton Tee Patch Logo - Columbus Indiana </h3>
+            </div>
+            <div class="similar-flex-item4">
+                <img src="img/HSG_shop_north_03.jpg" alt="Sport-Tek Posicharge Competitor Tee North" width="220" height="220">
+                <h3> Sport-Tek Posicharge Competitor Tee  </h3>
+            </div>
+        </div>
+
+        <h1 class="hsg-h1"> POPULAR </h1>
+
+        <div class="popular-flex-container">            
+            <div class="popular-flex-item1">
+                <img src="img/HSG_shop_north_01.jpg" alt="Pennant Super-10 Hoodie North" width="220" height="220">
+                <h3> Pennant Super-10 Hoodie (CNHS MDA) </h3>
+            </div>
+            <div class="popular-flex-item2">
+                <a href="product2.html"><img src="img/HSG_shop_north_07.jpg" alt="Long Sleeve T-Shirt North" width="220" height="220"></a>
+                <h3> Ultra Cotton 100% Cotton Long Sleeve T-Shirt North </h3>
+            </div>
+            <div class="popular-flex-item3">
+                <img src="img/HSG_shop_east_01.jpg"  alt="Pennant Super-10 Hoodie East" width="220" height="220">
+                <h3> Pennant Super-10 Hoodie (EAST) </h3>
+            </div>
+            <div class="popular-flex-item4">
+                <img src="img/HSG_shop_columbus_04.jpg" alt="Columbus Indiana T-Shirt" width="220" height="220">
+                <h3> Port & Company Long Sleeve Core Cotton Tee Patch Logo - Columbus Indiana </h3>
+            </div>
+        </div>
+
+        <div class="product-specs">
+            <h1> SPECIFICATIONS </h1>
+            <hr class="hsg-hr-orange"> 
+            <h2>FIT AND DESIGN</h2>
+            <ul>
+                <li> 5.4-ounce 100% cotton </li>
+                <li> 98/2 cotton/poly (In colors Ash) </li>
+                <li> 90/10 cotton/poly (In colors Athletic Heather) </li>
+                <li> 50/50 cotton/poly (In colors Neon Blue Neon Green Neon Orange Neon Pink Neon Yellow Dark 
+                    Heather Grey Heather Navy Heather Purple Heather Red Heather Royal Graphite Heather)</li>
+                <li> Due to the nature of 50/50 cotton/polyester neon fabrics special care must be taken throughout 
+                    the printing process.</li>
+            </ul>
+            
+            <span class="spec-note"> Please note: This product is transitioning from heat transfer labels to tear-away labels.
+                Your order may contain a combination of both labels.</span>
+        </div>
+
+        <footer class="footer">
+            <div class="footer-flex-container">
+                <img class="footer-flex-item1" src="img/HSG_Logo.svg" alt="HSG Logo">
+                <div class="footer-flex-item2">
+                    <div class="footer-info">
+                        <ul class="footer-nav">
+                            <li><a href="contact.html">Contact </a></li>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="shop.html"> Shop</a></li>
+                        </ul>
+                        <ul class="social-nav">
+                            <li> <a href="https://www.facebook.com/p/Hoosier-Sporting-Goods-100057117083265/"><i class="fa-brands fa-facebook"></i></a></li>
+                            <li> <i class="fa-brands fa-instagram"></i></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>

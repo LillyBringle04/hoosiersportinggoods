@@ -1,0 +1,200 @@
+.account-h1 {
+    margin-top: 2em;
+}
+
+/* Account Navigation */
+.account-nav {
+    width: 960px;
+    margin: 2em auto;
+    text-align: center;
+}
+
+.account-nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+.account-nav li {
+    display: inline;
+    padding: 1em 2em 1em 2em;
+}
+
+.account-nav a {
+    text-decoration: none;
+    color: black;
+    font-family: Inter, Arial, sans-serif;
+    text-align: center;
+    font-size: 1rem;
+}
+
+.account-nav a:hover {
+    border-bottom: 2px #EA443A solid;
+    color: #EA443A;
+}
+
+/* Col 1- Account Details and Rewards */
+
+.account-details {
+    background-color: rgb(241, 241, 241);
+    padding: 2em 1em 1em 1em;
+    margin: 1rem;
+}
+
+.account-details h1 {
+    text-align: left;
+    font-size: 1.25rem;
+}
+
+.account-details hr {
+    margin: 0.5em 0;
+}
+
+.account-details ul {
+    list-style-type: none;
+    color:#0E2332;
+    font-family: Inter, Arial, sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 2rem; 
+    text-transform: uppercase;
+}
+
+.reward-summary {
+    background-color: rgb(241, 241, 241);
+    padding: 2em 1em 1em 1em;
+    margin: 1rem;
+}
+
+.reward-summary h1 {
+    text-align: left;
+    font-size: 1.25rem;
+}
+
+.reward-summary hr {
+    text-align: left;
+}
+
+.reward-point {
+    color:#EA443A;
+    text-align: left;
+    font-family: Inter, Arial, sans-serif;
+    font-size: 1.5rem; 
+}
+
+.reward-summary h2 {
+    color:#0E2332;
+    text-align: left;
+    font-family: Inter, Arial, sans-serif;
+    font-size: 1rem;
+}
+
+.progress-bar {
+    display: flex;
+    margin: 1em;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: 
+      radial-gradient(closest-side, white 79%, transparent 80% 100%),
+      conic-gradient(#EA443A 75%, #f38f8a 0);    
+}
+  
+.progress-bar::before {
+    content: "400pts";
+}
+
+.order-summary {
+    background-color: rgb(241, 241, 241);
+    padding: 2em 1em 1em 1em;
+    margin: 1rem;
+}
+
+.order-summary h1 {
+    text-align: left;
+    font-size: 1.25rem;
+}
+
+.order-summary img{
+    margin: 0.5em;
+    border: 1px #0E2332 solid;
+}
+
+.order-summary .order {
+    background-color: white;
+    margin: 2em 0;
+}
+
+.order-summary span {
+    text-align: center;
+    color: #0E2332;
+    text-align: center;
+    font-family: Inter, Arial, sans-serif;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+}
+
+.order-summary .order:hover {
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);    
+}
+
+.footer {
+    margin-top: 2em;
+}
+
+@media only screen and (min-width: 300px) {
+    .account-nav {
+        text-align: left;
+    }
+   
+    .account-nav li {
+        font-size: 0.5rem;
+        padding: 1em 1em 1em 1em;
+    }
+}
+
+@media only screen and (min-width: 576px) {
+    .account-nav {
+        text-align: left;
+    }
+   
+    .account-nav li {
+        font-size: 0.5rem;
+        padding: 1em 1em 1em 1em;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .account-nav {
+        text-align: center;
+    }
+   
+    .account-nav li {
+        font-size: 1rem;
+        padding: 1em 2em 1em 2em;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .account-nav {
+        text-align: center;
+    }
+   
+    .account-nav li {
+        font-size: 1rem;
+        padding: 1em 2em 1em 2em;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .account-nav {
+        text-align: center;
+    }
+   
+    .account-nav li {
+        font-size: 1rem;
+        padding: 1em 2em 1em 2em;
+    }
+}
